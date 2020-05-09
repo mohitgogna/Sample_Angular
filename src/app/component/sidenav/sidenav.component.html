@@ -1,10 +1,33 @@
-<div id="mySidenav" class="sidenav">
-    <!-- <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a> -->
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
+ <div id="mySidenav" class="sidenav">
+ <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+
+  <ul>
+    <li>
+      <a [routerLink]="['/dashboard/detail']">
+        <p> Detail </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/dashboard/detail']">
+        <p> ABC </p>
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- <div class="sidebar-wrapper" id="mySidenav">
+  <ul class="nav">
+    <li class="nav-item">
+      <a [routerLink]="['/dashboard/detail']">
+        <p> Detail </p>
+      </a>
+    </li>
+  </ul>
+</div> -->
+
 <!--   
   <div id="main">
     <h2>Sidenav Push Example</h2>
@@ -12,7 +35,7 @@
     <span style="font-size:30px;cursor:pointer" (click)="toggleSideNav()">&#9776; open</span>
   </div> -->
 
-  <!-- <script>
+<!-- <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
