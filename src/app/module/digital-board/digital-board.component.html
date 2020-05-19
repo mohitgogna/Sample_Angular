@@ -1,0 +1,392 @@
+<div class="topnav" id="myTopnav">
+    <a href="#home" class="active">
+        <h3>Home</h3>
+    </a>
+    <a href="#Builds">
+        <h3>Builds</h3>
+    </a>
+    <a href="javascript:void(0);" class="icon" (click)="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<hr style="margin: 0; background-color: black;">
+<div class="build-header">
+    <h3>Nightly</h3>
+</div>
+
+
+<div class="container-fluid" style="background-color: black; padding: 2.5px;">
+
+    <!-- <div class="row" *ngFor="let item of dataArray">
+        <div class="col-6 col-sm-3" *ngFor="let subItem of item.column">
+            <div class="build-block">
+                {{item}} {{subItem}}
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+
+
+
+    
+    <div class="row">
+        <div class="col-6 col-sm-3">
+            <div class="build-block">
+                <app-pie></app-pie>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6 col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 2</h2>
+                {{data.IsBuild}}
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6 col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 3</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6 col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 4</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h1>Build 1</h1>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 5</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 6</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 8</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h1>Build 10</h1>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 5</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 6</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="build-block">
+                <h2>Build No. 8</h2>
+                <footer class="block-footer">
+                    <div class="block-footer-left">
+                        v4.1 build #07
+                    </div>
+                    <div class="block-footer-right">
+                        25m 18s
+                    </div>
+                </footer>
+                <div id=block-side>
+                    <div id="icon-bottom">
+                        <a href="#">
+                            <i class="fas fa-cloud"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-file"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+</div>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>

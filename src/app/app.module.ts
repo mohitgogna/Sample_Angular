@@ -11,6 +11,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { SharedModule } from './shared/shared.module';
+import { DigitalBoardComponent } from './module/digital-board/digital-board.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SharedModule } from './shared/shared.module';
     DetailComponent,
     HeaderComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    DigitalBoardComponent
   ],
   imports: [
     BrowserModule,
