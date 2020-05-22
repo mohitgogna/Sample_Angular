@@ -12,6 +12,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { SharedModule } from './shared/shared.module';
 import { DigitalBoardComponent } from './module/digital-board/digital-board.component';
+import { KPIMetricsComponent } from './module/kpimetrics/kpimetrics.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DigitalBoardComponent } from './module/digital-board/digital-board.comp
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
-    DigitalBoardComponent
+    DigitalBoardComponent,
+    KPIMetricsComponent
   ],
   imports: [
     BrowserModule,
