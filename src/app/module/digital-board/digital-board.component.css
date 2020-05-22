@@ -119,6 +119,10 @@
     color: black;
 }
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
 .col-sm-3 {
     padding: 2.5px;
     /* padding-bottom: 5px;
