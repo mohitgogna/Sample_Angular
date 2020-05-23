@@ -17,27 +17,28 @@
 
 <div class="container-fluid" style="background-color: black; padding: 2.5px;">
 
-    <!-- <div class="row" *ngFor="let item of dataArray">
-        <div class="col-6 col-sm-3" *ngFor="let subItem of item.column">
+    <div class="row">
+        <div class="col-6 col-sm-3" *ngFor="let item of builds">
             <div class="build-block">
-                {{item}} {{subItem}}
+                 <h3 style="text-align: center; margin-top: 10px; font-size: 150%">{{item.Name}}</h3>
+                 <h6 style="text-align: center; font-size: 80%">{{item.Info}}</h6>
                 <footer class="block-footer">
                     <div class="block-footer-left">
-                        v4.1 build #07
+                        {{item.Version}}
                     </div>
                     <div class="block-footer-right">
-                        25m 18s
+                        {{item.Time}}
                     </div>
                 </footer>
                 <div id=block-side>
                     <div id="icon-bottom">
-                        <a href="#">
+                        <a href='{{item.Link1}}'>
                             <i class="fas fa-cloud"></i>
                         </a>
-                        <a href="#">
+                        <a routerLink='{{item.Link2}}'>
                             <i class="fas fa-file"></i>
                         </a>
-                        <a href="#">
+                        <a href='{{item.Link3}}'>
                             <i class="fas fa-bars"></i>
                         </a>
                     </div>
@@ -45,13 +46,13 @@
             </div>
 
         </div>
-    </div> -->
+    </div>
 
 
 
 
     
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-6 col-sm-3">
             <div class="build-block">
                 <app-pie></app-pie>
@@ -375,7 +376,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>  -->
 
 </div>
 
