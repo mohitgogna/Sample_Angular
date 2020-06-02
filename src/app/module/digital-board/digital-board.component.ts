@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Build } from '../../model/Build';
+import { ModuleService } from '../module.service';
+
 
 @Component({
   selector: 'app-digital-board',
@@ -8,26 +10,10 @@ import { Build } from '../../model/Build';
 })
 export class DigitalBoardComponent implements OnInit {
 
-  builds: Build[]=[];
+  builds: Build[] = [];
 
   dataGenerator(): void {
-    // buildInfo: Build;
-
     for (let i = 0; i < 10; i++) {
-
-      // this.buildInfo = {
-      //   Id: i,
-      //   Name: "Pipeline " + i,
-      //   Status: "Passed",
-      //   Info: "This is build information of build " + i,
-      //   Version: "v1.1." + i,
-      //   Time: i + "m 24s",
-      //   Link1: "#",
-      //   Link2: "#" + i,
-      //   Link3: "#",
-      //   Progress: "10" + i
-      // };
-
       this.builds.push({
         Id: i.toString(),
         Name: "Pipeline " + i,
@@ -45,7 +31,7 @@ export class DigitalBoardComponent implements OnInit {
     //return this.builds;
   }
 
-  
+
   // buildInfo_1: Build = {
   //   Id: "2",
   //   Name: "Search api contract",
@@ -60,13 +46,14 @@ export class DigitalBoardComponent implements OnInit {
   // }
 
 
-  constructor() { 
-    console.log("Called");
-    this.dataGenerator();
+  constructor(private moduleService: ModuleService) {
+
   }
 
   ngOnInit(): void {
     //this.dataGenerator();
+    this.builds = this.moduleService.getBuilds();
+    this.moduleService.getJenkinsBuild();
   }
 
   myFunction() {
