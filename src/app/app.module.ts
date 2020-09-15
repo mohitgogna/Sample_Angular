@@ -13,6 +13,8 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { SharedModule } from './shared/shared.module';
 import { DigitalBoardComponent } from './module/digital-board/digital-board.component';
 import { KPIMetricsComponent } from './module/kpimetrics/kpimetrics.component';
+import { ModuleService } from './module/module.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,12 @@ import { KPIMetricsComponent } from './module/kpimetrics/kpimetrics.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ModuleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
