@@ -18,13 +18,14 @@
 <div class="container-fluid" style="background-color: black; padding: 2.5px;">
 
     <div class="row">
-        <div class="col-6 col-sm-3" *ngFor="let item of builds">
+        <div class="col-6 col-sm-3" *ngFor="let item of builds; let iIndex=index">
             <div class="build-block">
-                 <h3 style="text-align: center; margin-top: 10px; font-size: 150%">{{item.Name}}</h3>
-                 <h6 style="text-align: center; font-size: 80%">{{item.Info}}</h6>
+                <h3 style="text-align: center; margin-top: 10px; font-size: 150%">{{item.Name}}</h3>
+                <h6 style="text-align: center; font-size: 80%">{{item.Info}}</h6>
                 <footer class="block-footer">
                     <div class="block-footer-left">
                         {{item.Version}}
+                        <!-- {{iIndex}} -->
                     </div>
                     <div class="block-footer-right">
                         {{item.Time}}
@@ -51,7 +52,7 @@
 
 
 
-    
+
     <!-- <div class="row">
         <div class="col-6 col-sm-3">
             <div class="build-block">
