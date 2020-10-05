@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './module/dashboard/dashboard.component';
 import { DetailComponent } from './module/detail/detail.component';
+import { DigitalBoardComponent } from './module/digital-board/digital-board.component';
 import { BarComponent } from './shared/widget/bar/bar.component';
 
 
@@ -13,15 +14,23 @@ const routes: Routes = [
       {
         path: 'detail',
         component: DetailComponent
+      },
+      {
+        path:'digitalboard',
+        component:DigitalBoardComponent
+      },
+      {
+        path:'bar',
+        component:BarComponent
       }
     ]
   },
   {
-    path: '',
-    // component: DashboardComponent,
-    redirectTo:'/dashboard/detail',
+    path: 'dashboard-detail',
+    component: DetailComponent,
+    //redirectTo:'/dashboard/detail',
     pathMatch:'full'
-  },
+  },  
   {
     path:'bar',
     component:BarComponent
