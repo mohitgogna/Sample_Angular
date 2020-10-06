@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './module/dashboard/dashboard.component';
 import { DetailComponent } from './module/detail/detail.component';
 import { DigitalBoardComponent } from './module/digital-board/digital-board.component';
+import { KPIMetricsComponent } from './module/kpimetrics/kpimetrics.component';
 import { BarComponent } from './shared/widget/bar/bar.component';
 
 
@@ -20,8 +21,12 @@ const routes: Routes = [
         component:DigitalBoardComponent
       },
       {
-        path:'bar',
-        component:BarComponent
+        path:'kpi',
+        component:KPIMetricsComponent
+      },
+      {
+        path: '',
+        component: DetailComponent
       }
     ]
   },
