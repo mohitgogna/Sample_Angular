@@ -384,7 +384,7 @@
   </div>
    -->
 <app-header (homeButtonClicked)='onHomeButtonClicked($event)'></app-header>
-<app-sidenav [isSidenavOpened]='sidenavOpenedStatus'></app-sidenav>
+<app-sidenav [isSidenavOpened]='sidenavOpenedStatus' (isSidenavClosed)='onSidenavClosed($event)'></app-sidenav>
 <div id="mainContent">
     <router-outlet></router-outlet>     
 </div>

@@ -29,4 +29,10 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  onSidenavClosed(params:any):void{
+    console.log(`onSidenavClosed params - ${params}`);
+    this.toggleSideNav();
+    this.sidenavOpenedStatus = !this.sidenavOpenedStatus;
+  }
+
 }
