@@ -15,6 +15,8 @@ import { DigitalBoardComponent } from './module/digital-board/digital-board.comp
 import { KPIMetricsComponent } from './module/kpimetrics/kpimetrics.component';
 import { ModuleService } from './module/module.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ModelModule } from './model/model.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ModelModule
   ],
   providers: [
     ModuleService

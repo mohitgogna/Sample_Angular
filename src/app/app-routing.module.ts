@@ -5,6 +5,7 @@ import { DetailComponent } from './module/detail/detail.component';
 import { DigitalBoardComponent } from './module/digital-board/digital-board.component';
 import { KPIMetricsComponent } from './module/kpimetrics/kpimetrics.component';
 import { BarComponent } from './shared/widget/bar/bar.component';
+import { TableComponent } from './shared/widget/table/table.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path:'kpi',
         component:KPIMetricsComponent
+      },
+      {
+        path:'table',
+        component:TableComponent
       },
       {
         path: '',
