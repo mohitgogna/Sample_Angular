@@ -4,7 +4,7 @@ import { BarComponent } from './widget/bar/bar.component';
 import { PieComponent } from './widget/pie/pie.component';
 import {HighchartsChartModule} from 'highcharts-angular';
 import { TableComponent } from './widget/table/table.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HighchartsChartModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     BarComponent,

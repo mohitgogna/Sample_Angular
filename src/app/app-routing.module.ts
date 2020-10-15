@@ -44,6 +44,11 @@ const routes: Routes = [
   {
     path:'bar',
     component:BarComponent
+  },
+  {
+    path:'',
+    redirectTo:'/dashboard',
+    pathMatch:'full'
   }
 ];
 
