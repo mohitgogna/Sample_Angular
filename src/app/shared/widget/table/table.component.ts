@@ -50,7 +50,6 @@ export class TableComponent implements OnInit {
 
   getValidationMessages(state: any, thingName?: string) {
     
-    console.log("222");
     let thing: string = state.path || thingName;
     let messages: string[] = [];
     if (state.errors) {
@@ -85,7 +84,6 @@ export class TableComponent implements OnInit {
 
   getFormValidationMessages(form: NgForm): string[] {
     
-    console.log("111");
     let messages: string[] = [];
     Object.keys(form.controls).forEach(k => {
         this.getValidationMessages(form.controls[k], k)

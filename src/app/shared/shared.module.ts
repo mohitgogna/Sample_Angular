@@ -5,12 +5,14 @@ import { PieComponent } from './widget/pie/pie.component';
 import {HighchartsChartModule} from 'highcharts-angular';
 import { TableComponent } from './widget/table/table.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TableReactiveformComponent } from './widget/table-reactiveform/table-reactiveform.component';
 
 @NgModule({
   declarations: [
     BarComponent,
     PieComponent,
-    TableComponent
+    TableComponent,
+    TableReactiveformComponent
   ],
   imports: [
     CommonModule,
