@@ -1,0 +1,73 @@
+<style>
+    input.ng-dirty.ng-invalid {
+        border: 2px solid #ff0000
+    }
+
+    input.ng-dirty.ng-valid {
+        border: 2px solid yellow
+    }
+</style>
+
+<div class="m-2">
+    <div class="bg-info text-white p-2">
+        Selected Build : {{selectedBuild || '(None)'}}
+    </div>
+
+    <table class="table table-ordered">
+        <tr *ngFor="let item of getBuild(); let i=index" [class.bg-info]="getSelectedItem(item)"
+            (mouseover)="selectedBuild=item.Id">
+            <td>{{i+1}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.Status}}</td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label>Build Name</label>
+        <input class="form-control" [(ngModel)]="selectedBuild" />
+    </div>
+
+
+    <div class="m-2">
+        <div class="bg-info">Build data: {{jsonBuild}}</div>
+
+        <!-- <form novalidate (ngSubmit)="addBuild(newBuild)"> -->
+        <form novalidate #form="ngForm" (ngSubmit)="submitBuild(form)">
+            <div class="bg-danger text-white p-2 mb-2" *ngIf="formSubmitted && form.invalid">
+                There are problems with the form
+                <ul>
+                    <li *ngFor="let error of getFormValidationMessages(form)">
+                        {{error}}
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label>Build Name</label>
+                <input class="form-control" [(ngModel)]="newBuild.Name" name="buildName" required minlength="10"
+                    #name="ngModel">
+
+                <ul class="text-danger list-unstyled" *ngIf="(formSubmitted || name.dirty)  && name.invalid">
+                    <li *ngFor="let error of getValidationMessages(name)">
+                        {{error}}
+                    </li>
+                    <!-- <li *ngIf="name.errors.required">
+                        You must enter a product name
+                    </li>
+                    <li *ngIf="name.errors.pattern">
+                        Product names can only contain letters and spaces
+                    </li>
+                    <li *ngIf="name.errors.minlength">
+                        Product names must be at least
+                        {{name.errors.minlength.requiredLength}} characters
+                    </li> -->
+                </ul>
+
+            </div>
+            <!-- <button class="btn btn-primary" (click)="addBuild(newBuild)">Submit</button> -->
+            <button class="btn btn-primary" type="submit" [disabled]="formSubmitted && form.invalid">
+                Create
+            </button>
+        </form>
+    </div>
+
+</div>

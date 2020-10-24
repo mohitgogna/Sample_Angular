@@ -5,6 +5,8 @@ import { DetailComponent } from './module/detail/detail.component';
 import { DigitalBoardComponent } from './module/digital-board/digital-board.component';
 import { KPIMetricsComponent } from './module/kpimetrics/kpimetrics.component';
 import { BarComponent } from './shared/widget/bar/bar.component';
+import { TableReactiveformComponent } from './shared/widget/table-reactiveform/table-reactiveform.component';
+import { TableComponent } from './shared/widget/table/table.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,14 @@ const routes: Routes = [
         component:KPIMetricsComponent
       },
       {
+        path:'table',
+        component:TableComponent
+      },
+      {
+        path:'table-react',
+        component:TableReactiveformComponent
+      },
+      {
         path: '',
         component: DetailComponent
       }
@@ -39,6 +49,11 @@ const routes: Routes = [
   {
     path:'bar',
     component:BarComponent
+  },
+  {
+    path:'',
+    redirectTo:'/dashboard',
+    pathMatch:'full'
   }
 ];
 
